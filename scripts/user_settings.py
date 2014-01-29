@@ -2,9 +2,10 @@ machines = [
 	{
 		'name': 'user1',
 		'mach': 'i686',
-		'workdir': 'i686-workdir', # created on the master
-		'hostdir': '/hostdir',  # must exist on the slave
-		'crosstarget': 'native',
+		'workdir': 'i686-workdir',  # created on the master
+		'hostdir': '/hostdir',      # must exist on the slave
+		'crosstarget': 'native',    # native or 'xbps-src cross profile'
+                'subarch': '',              # subarch can be used for fake archs (i686-musl, x86_64-musl)
 		'slave_name': 'i686_void',
 		'slave_pass': 'SLAVE_PASSWORD',
 		'admin': 'user1'
@@ -12,9 +13,10 @@ machines = [
 	{
 		'name': 'user2',
 		'mach': 'x86_64',
-		'workdir': 'x86_64-workdir', # created on the master
-		'hostdir': '/hostdir', # must exist on slave
+		'workdir': 'x86_64-workdir',    # created on the master
+		'hostdir': '/hostdir',          # must exist on slave
 		'crosstarget': 'native',
+                'subarch': '',
 		'slave_name': 'x86_64_void',
 		'slave_pass': 'SLAVE_PASSWORD',
 		'admin': 'user2'
@@ -23,8 +25,9 @@ machines = [
 		'name': 'user3',
 		'mach': 'armv6l',
 		'workdir': 'cross-rpi-workdir', # created on the master
-		'hostdir': '/hostdir', # must exist on slave
+		'hostdir': '/hostdir',          # must exist on slave
 		'crosstarget': 'armv6hf',
+                'subarch': '',
 		'slave_name': 'crossrpi_void',
 		'slave_pass': 'SLAVE_PASSWORD',
 		'admin': 'user3'
