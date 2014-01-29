@@ -20,7 +20,7 @@ machines = [
 		'slave_name': 'x86_64_void',
 		'slave_pass': 'SLAVE_PASSWORD',
 		'admin': 'user2'
-	}
+	},
 	{
 		'name': 'user3',
 		'mach': 'armv6l',
