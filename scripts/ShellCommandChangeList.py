@@ -43,6 +43,7 @@ class ShellCommandChangeList(shell.ShellCommand):
 		kwargs = self.remote_kwargs
 		kwargs['command'] = command
 		kwargs['logfiles'] = self.logfiles
+		kwargs['timeout'] = 3600
 
 		# Create the RemoteShellCommand and start it
 		cmd = RemoteShellCommand(**kwargs)
